@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="news_app">News App</string>
+    <string name="something_went_wrong">something_went_wrong\n</string>
+    <string name="retry">retry\n</string>
+    <string name="ok">ok\n</string>
+    <string name="something_went_wrong_please_try_again_later">something went wrong please try again later</string>
+    <string name="retrybtn">Retry</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/news_image"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitXY"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverLay.App.CornerSize50Percent"
+        tools:src="@tools:sample/backgrounds/scenic"
+        />
+
+    <TextView
+        android:id="@+id/news_sourceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{article.title}"
+        />
+
+    <TextView
+        android:id="@+id/news_titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{article.author}"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/news_dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{article.author}"
+        />
+
+</LinearLayout>
