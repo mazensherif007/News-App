@@ -67,7 +67,7 @@ class ActivityNews: BaseActivity<ActivityNewsBinding>() {
         hideError()
         lifecycleScope.launch {
             try {
-                val response = ApiManager.webService().getSources(category = "sports")
+                val response = ApiManager.webService().getSources(category = selectedImage())
                 showTabs(response.sources)
                 hideLoading()
             } catch (e: Exception) {
@@ -76,6 +76,31 @@ class ActivityNews: BaseActivity<ActivityNewsBinding>() {
                 }
             }
         }
+    }
+
+    private fun selectedImage(): String {
+        when (val selectedImage = intent.getStringExtra("category")) {
+            "science" -> {
+                return "science"
+            }
+            "business" -> {
+                return "business"
+            }
+            "entertainment" -> {
+                return "entertainment"
+            }
+            "general" -> {
+                return "general"
+            }
+            "health" -> {
+                return "health"
+            }
+            "sports" -> {
+                return "sports"
+            }
+            else -> return selectedImage.toString()
+        }
+
     }
 
     private fun showTabs(sources: List<SourcesItem?>?) {
